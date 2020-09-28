@@ -4,11 +4,13 @@ const app = express();
 function capitalize(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
   }
+
+  
 app.use(express.urlencoded({ extended: true }));
 
 app.get('/', function (req, res)  {
   res.send(`<form action= '/' method = "post"> 
-  <input type ="text" name="name" /> 
+  <input type ="text" name="nombre" /> 
   <button type="submit">Enviar</button> 
   </form>`);
 });
